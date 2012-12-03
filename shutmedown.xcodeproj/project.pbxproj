@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB39EA7C166D0A48007FF241 /* icon_512.icns in Resources */ = {isa = PBXBuildFile; fileRef = BB39EA7B166D0A48007FF241 /* icon_512.icns */; };
 		BBBD2418166CF3F1003B5249 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBD2417166CF3F1003B5249 /* Cocoa.framework */; };
 		BBBD2422166CF3F1003B5249 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBBD2420166CF3F1003B5249 /* InfoPlist.strings */; };
 		BBBD2424166CF3F1003B5249 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBD2423166CF3F1003B5249 /* main.m */; };
 		BBBD2428166CF3F1003B5249 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BBBD2426166CF3F1003B5249 /* Credits.rtf */; };
 		BBBD242B166CF3F1003B5249 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBD242A166CF3F1003B5249 /* AppDelegate.m */; };
 		BBBD242E166CF3F2003B5249 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBBD242C166CF3F2003B5249 /* MainMenu.xib */; };
+		BBBD2435166CF790003B5249 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBD2434166CF790003B5249 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB39EA7B166D0A48007FF241 /* icon_512.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon_512.icns; sourceTree = "<group>"; };
 		BBBD2413166CF3F1003B5249 /* shutmedown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shutmedown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBBD2417166CF3F1003B5249 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BBBD241A166CF3F1003B5249 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -29,6 +32,7 @@
 		BBBD2429166CF3F1003B5249 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BBBD242A166CF3F1003B5249 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BBBD242D166CF3F2003B5249 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BBBD2434166CF790003B5249 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBD2435166CF790003B5249 /* Carbon.framework in Frameworks */,
 				BBBD2418166CF3F1003B5249 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +51,7 @@
 		BBBD2408166CF3F1003B5249 = {
 			isa = PBXGroup;
 			children = (
+				BB39EA7B166D0A48007FF241 /* icon_512.icns */,
 				BBBD241D166CF3F1003B5249 /* shutmedown */,
 				BBBD2416166CF3F1003B5249 /* Frameworks */,
 				BBBD2414166CF3F1003B5249 /* Products */,
@@ -63,6 +69,7 @@
 		BBBD2416166CF3F1003B5249 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBBD2434166CF790003B5249 /* Carbon.framework */,
 				BBBD2417166CF3F1003B5249 /* Cocoa.framework */,
 				BBBD2419166CF3F1003B5249 /* Other Frameworks */,
 			);
@@ -156,6 +163,7 @@
 				BBBD2422166CF3F1003B5249 /* InfoPlist.strings in Resources */,
 				BBBD2428166CF3F1003B5249 /* Credits.rtf in Resources */,
 				BBBD242E166CF3F2003B5249 /* MainMenu.xib in Resources */,
+				BB39EA7C166D0A48007FF241 /* icon_512.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +305,7 @@
 				BBBD2433166CF3F2003B5249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
