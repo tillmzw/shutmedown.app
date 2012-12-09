@@ -52,9 +52,9 @@
         [self scheduleTimerWithSeconds:time AndCallback:@selector(shutdown)];
     } else {
         [self scheduleTimerWithSeconds:time AndCallback:@selector(sleep)];
-
     }
 
+    [self scheduleRemainingTimeTimer];
     
 }
 
@@ -63,9 +63,26 @@
     [self.progressIndicator setHidden:NO];
     [self.progressIndicator startAnimation:self];
     [self.button setTitle:@"abort"];
-
 }
 
+- (void)scheduleRemainingTimeTimer{
+    self.timerUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateRemainingTime) userInfo:nil repeats:YES];
+}
+
+- (void)updateRemainingTime{
+    NSDate *fireData = [self.timer fireDate];
+    NSDate *now = [NSDate date];
+                   
+    NSUInteger timeDifference = [fireData timeIntervalSinceDate:now];
+    NSUInteger h = timeDifference / 3600;
+    NSUInteger m = (timeDifference / 60) % 60;
+    NSUInteger s = timeDifference % 60;
+    
+    NSString *formattedTime = [NSString stringWithFormat:@"%lu:%02lu:%02lu", h, m, s];
+    
+    
+    [self.remainingTimeField setStringValue:formattedTime];
+}
 
 - (void)cancelTimer{
     NSLog(@"cancelling timer");

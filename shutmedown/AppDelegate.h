@@ -19,8 +19,12 @@
 @property (weak) IBOutlet NSSegmentedControl *modeSwitch;
 @property (weak) IBOutlet NSButton *button;
 @property (weak) IBOutlet NSProgressIndicator *progressIndicator;
+@property (weak) IBOutlet NSTextField *remainingTimeField;
 
 @property (strong) NSTimer *timer;
+@property (strong) NSTimer *timerUpdateTimer;
+
+
 
 - (IBAction)helpButton:(id)sender;
 - (IBAction)button:(id)sender;
