@@ -59,9 +59,10 @@
 }
 
 - (void)scheduleTimerWithSeconds:(NSInteger)seconds AndCallback:(SEL)callback {
+    [self.textField setEnabled:NO];
+    [self.timeUnit setEnabled:NO];
+    [self.modeSwitch setEnabled:NO];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:seconds target:self selector:callback userInfo:nil repeats:NO];
-    [self.progressIndicator setHidden:NO];
-    [self.progressIndicator startAnimation:self];
     [self.button setTitle:@"abort"];
 }
 
@@ -79,7 +80,6 @@
     NSUInteger s = timeDifference % 60;
     
     NSString *formattedTime = [NSString stringWithFormat:@"%lu:%02lu:%02lu", h, m, s];
-    
     
     [self.remainingTimeField setStringValue:formattedTime];
 }
@@ -104,10 +104,12 @@
 }
 
 -(void) reset {
+    [self.textField setEnabled:YES];
+    [self.timeUnit setEnabled:YES];
+    [self.modeSwitch setEnabled:YES];
+    
     [self.timer invalidate];
     self.timer = nil;
-    [self.progressIndicator stopAnimation:self];
-    [self.progressIndicator setHidden:YES];
     [self.button setTitle:@"go!"];
 }
 
